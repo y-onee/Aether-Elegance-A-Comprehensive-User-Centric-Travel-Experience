@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax Scrolling</title>
+    <link rel="stylesheet" href="main.css">
+
+</head>
+<body>
+    <!-- <div class="navbar">
+        <a href="">Map</a>
+        <a href="">Navigation</a>
+        <a href="">Bucket List</a>
+        <a href="">Favorites</a>
+        <div class="dropdown">
+            <button class="dropbtn">Categories</button>
+            <div class="hidden">
+                <a href="">Sofas</a>
+                <a href="">Chairs</a>
+                <a href="">Beds</a>
+                <a href="">Tables</a>
+            </div>    
+        </div>
+        <a href="login.html">Login</a>
+        <input type="text" name="Search" id="" placeholder="Search...">
+</div> -->
+    <div class="parallax-section1">
+        <div class="parallax-bg" id="p3" style="background-image: url('Media/P1.jpg');"></div>
+        <h2>Welcome to Image 1</h2>
+    </div>
+
+    <div class="parallax-section2">
+        <div class="parallax-bg" id="p2" style="background-image: url('Media/P2.jpg');"></div>
+        <h2>Welcome to Image 2</h2>
+    </div>
+
+    <div class="parallax-section3">
+        <div class="parallax-bg" id="p3" style="background-image: url('Media/P3.jpg');"></div>
+        <h2>Welcome to Image 3</h2>
+    </div>
+
+    <!-- <script>
+        document.addEventListener('scroll', function() {
+            const scrollPosition = window.scrollY;
+            const parallaxSections = document.querySelectorAll('.parallax-section');
+    
+            parallaxSections.forEach(function(section, index) {
+                const speed = (index + 1) * 0.2; // Adjust the speed as needed
+                const parallaxBg = section.querySelector('.parallax-bg');
+                parallaxBg.style.transform = 'translateY(' + scrollPosition * speed * -1 + 'px)';
+            });
+        });
+    </script> -->
+    
+</body>
+</html>
