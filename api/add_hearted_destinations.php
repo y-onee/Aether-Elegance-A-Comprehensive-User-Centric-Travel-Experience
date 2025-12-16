@@ -1,5 +1,5 @@
 <?php
-require_once 'config.php';
+require_once '../config.php';
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["destination_id"])) {
     // Handle adding hearted destination to the database
     $destination_id = $_POST["destination_id"];

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Favourites</title>
-    <link rel="stylesheet" href="favourite.css">
+    <link rel="stylesheet" href="css/favourite.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
@@ -88,13 +88,13 @@
     </div>
 </section>
 
-<script src="first.js"></script>
+<script src="js/first.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
 $(document).ready(function() {
     $(".heart-checkbox").change(function() {
         var destinationId = $(this).attr("id").split("-")[2]; // Extract destination ID from checkbox ID
-        $.post("delete_favourite.php", { destination_id: destinationId }, function(data) {
+        $.post("api/delete_favourite.php", { destination_id: destinationId }, function(data) {
             if (data === "success") {
                 location.reload(); // Refresh the page after successful deletion
             } else {

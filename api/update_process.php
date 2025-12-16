@@ -14,7 +14,7 @@ if(isset($_SESSION['user_id']) && isset($_POST['username']) && isset($_POST['ema
     }
 
     // Connect to the database
-    require_once 'config.php';
+    require_once '../config.php';
     $conn = getDBConnection();
 
     // Fetch user's current username and email

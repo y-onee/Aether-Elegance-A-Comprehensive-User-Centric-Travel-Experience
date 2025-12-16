@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gallery</title>
-    <link rel="stylesheet" href="gallery.css">
+    <link rel="stylesheet" href="css/gallery.css">
 </head>
 <body>
     <header>
@@ -57,7 +57,7 @@
         </div>
     </div>
     </section>
-    <script src="first.js"></script>
+    <script src="js/first.js"></script>
     <script>
         const galleryContainer = document.getElementById('galleryContainer');
 

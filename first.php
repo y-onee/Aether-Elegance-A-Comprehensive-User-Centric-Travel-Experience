@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aether-Elegance</title>
-    <link rel="stylesheet" href="first.css">
+    <link rel="stylesheet" href="css/first.css">
 </head>
 <body>
     <header>
@@ -118,6 +118,6 @@
 </div>
 </section>
 
-<script src="first.js"></script>
+<script src="js/first.js"></script>
 </body>
 </html>

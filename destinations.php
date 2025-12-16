@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Destinations</title>
-    <link rel="stylesheet" href="destinations.css">
+    <link rel="stylesheet" href="css/destinations.css">
 </head>
 <body>
 <header>
@@ -86,13 +86,13 @@
         </div>
     </section>
 
-    <script src="first.js"></script>
+    <script src="js/first.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
     $(document).ready(function() {
         $(".heart-checkbox").change(function() {
             var destinationId = $(this).attr("id").split("-")[2]; // Extract destination ID from checkbox ID
-            $.post("add_hearted_destinations.php", { destination_id: destinationId }, function(data) {
+            $.post("api/add_hearted_destinations.php", { destination_id: destinationId }, function(data) {
                 alert(data); // Show response message
             });
         });
@@ -111,7 +111,7 @@
     });
 
     function isHearted(destinationId) {
-        $.post("check_hearted_destinations.php", { destination_id: destinationId }, function(data) {
+        $.post("api/check_hearted_destinations.php", { destination_id: destinationId }, function(data) {
             if (data === "true") {
                 $("#heart-checkbox-" + destinationId).next(".heart-label").addClass("red-heart");
             }
@@ -119,7 +119,7 @@
     }
 
     function addHeartedDestination(destinationId) {
-        $.post("add_hearted_destinations.php", { destination_id: destinationId }, function(data) {
+        $.post("api/add_hearted_destinations.php", { destination_id: destinationId }, function(data) {
             if (data === "success") {
                 $("#heart-checkbox-" + destinationId).next(".heart-label").addClass("red-heart");
             }
@@ -136,7 +136,7 @@
         $(".heart-checkbox").change(function() {
             var destinationId = $(this).attr("id").split("-")[2]; // Extract destination ID from checkbox ID
             <?php if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true && isset($_SESSION['user_id'])): ?>
-                $.post("add_hearted_destinations.php", { destination_id: destinationId }, function(data) {
+                $.post("api/add_hearted_destinations.php", { destination_id: destinationId }, function(data) {
                     alert(data); // Show response message
                 });
             <?php else: ?>
