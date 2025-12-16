@@ -1,0 +1,242 @@
+body {
+    margin: 0;
+    padding: 0;
+    /* font-family: 'Poppins', sans-serif; */
+    /* font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
+    /* font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+    font-family: 'Courier New', Courier, monospace;
+    background-image: url('Media/P4.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+    scrollbar-width: none;
+}
+
+header{
+
+    position: relative;
+    overflow: hidden;
+}
+
+nav{
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 9999;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.05), transparent);
+}
+
+.container1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.container1 button{
+    background-color: inherit;
+    appearance: none;
+    cursor: pointer;
+    color: none;
+    border: none;
+    z-index: 9999;
+}
+
+/* .container button:hover .hamburger-menu{
+    transform: scaleZ(10);
+    height: 37px;
+} */
+
+.logo{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 30px;
+    letter-spacing: 5px;
+}
+
+.logo a{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-decoration: none;
+    color: black;
+}
+
+.hamburger-menu{
+    height: 35px;
+}
+
+.cover{
+    display: none;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    /* display: flex; */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-color: blue; */
+    backdrop-filter: blur(9px);
+    z-index: 999999;
+}
+
+.cross {
+    display: block; /* Change to block to make it visible */
+    position: absolute;
+    top: 180px; /* Adjust the positioning as needed */
+    right: 180px; /* Adjust the positioning as needed */
+    z-index: 999999; /* Ensure it's above other elements */
+}
+
+.navbar{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(193, 193, 193, 0.574);
+    height: 500px;
+    width: 1200px;
+    border-radius: 20px;
+}
+
+.navbar input{
+    display: flex;
+    align-items: center;
+    width: 180px;
+    height: 20px;
+    padding: 5px 10px;
+    border: none;
+    background-color: rgba(193, 193, 193, 0.574);
+    margin: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+}
+
+.navbar a{
+    /* float: left; */
+    display: block;
+    
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-size: 20px;
+    letter-spacing: 5px;
+    text-shadow: 2px 1px black;
+    font-family: 'Courier New', Courier, monospace;
+    /* border-bottom: 1px dotted rgb(255, 255, 255); */
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    z-index: 999;
+    backdrop-filter: blur(9px);
+}
+
+.div0{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* width: 50vw; */
+    /* margin: 20px 0px; */
+    background-color: rgba(255, 255, 255, 0.423);
+    padding: 70px;
+    /* height: 100vh; */
+}
+
+.sec {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.div1{
+    display: flex;
+    flex-direction: column;
+    width: 45vw;
+    height: 100vh;
+}
+
+
+span {
+    margin-right: 10px; /* Optional: Add some space between spans */
+}
+
+.contain {
+    margin: 20px;
+}
+
+#destination-name {
+    font-size: 20px;
+    /* font-style: oblique; */
+}
+
+#destination-location {
+    font-style: italic;
+}
+
+/* Heart checkbox styles */
+.heart-checkbox {
+    display: none;
+}
+.heart-label {
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    line-height: 0; /* Ensure no extra space above or below the heart */
+}
+.heart-label::before {
+    content: "\1F5D1"; /* Unicode character for an empty heart */
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 24px;
+    line-height: 1; /* Reset line height */
+}
+.heart-checkbox:checked + .heart-label::before {
+    content: "\1F5D1"; /* Unicode character for a filled heart */
+    color: red; /* Change the color as needed */
+}
+
+.inside-heart{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+input[type="submit" i]
+{
+    border: none;
+    border-bottom: none;
+    background-color: rgba(0, 0, 0, 0.101);
+    color: white; /* Set text color to ensure visibility */
+    cursor: pointer; /* Add pointer cursor to indicate clickable */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35px;
+    border-radius: 2px;
+    /* padding: 3px; */
+}
+
+.submit {
+    border: none;
+    background-color: rgba(0, 0, 0, 0.101);
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.submit:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}

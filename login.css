@@ -1,0 +1,245 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    /* font-family: 'Poppins', sans-serif; */
+    /* font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
+    /* font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+    font-family: 'Courier New', Courier, monospace;
+    background-image: url('Media/P4.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+}
+
+header{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+nav{
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 9999;
+    /* background: linear-gradient(to bottom, rgba(0, 0, 0, 0.05), transparent); */
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+    margin-left: 50px;
+    margin-right: 50px;
+    /* z-index: 9999; */
+}
+
+.container button{
+    background-color: inherit;
+    appearance: none;
+    cursor: pointer;
+    color: none;
+    border: none;
+    /* z-index: 9999; */
+}
+
+/* .container button:hover .hamburger-menu{
+    transform: scaleZ(10);
+    height: 37px;
+} */
+
+.logo{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 30px;
+    letter-spacing: 5px;
+}
+
+.logo a{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-decoration: none;
+    color: black;
+}
+
+.hamburger-menu{
+    height: 35px;
+}
+
+.mountain1{
+    position: absolute;
+    bottom: -100px;
+ width: 100vw;
+    height: 100vh;
+    right: 0;
+    z-index: 19;
+} 
+
+.mountain2{
+    position: absolute;
+    width: 100vw;
+    height: 100%;
+    z-index: 2;
+    right: 0;
+    justify-content: center;
+    align-items: center;
+}  
+
+.sky{
+    position: relative;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    right: 0;
+    z-index: -1;
+}
+
+.center{
+    position: absolute;
+    z-index: 999;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 70px;
+    font-weight: 100;
+    text-shadow: 2px 2px #000000;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 10px;
+}
+
+.shadow{
+    position: relative;
+    /* background-color: rgb(23, 23, 210); */
+    bottom: 20%;
+    height: 20vh;
+    z-index: 99;
+    background: linear-gradient(to top, #000000, transparent );
+}
+
+
+.cover{
+    display: flex;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-color: blue; */
+    backdrop-filter: blur(9px);
+    z-index: 9;
+}
+
+.navbar{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(193, 193, 193, 0.574);
+    height: 500px;
+    width: 1200px;
+    border-radius: 20px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-size: 15px;
+    letter-spacing: 5px;
+    text-shadow: 2px 1px black;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.navbar input{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 180px;
+    height: 20px;
+    padding: 5px 10px;
+    border: none;
+    background-color: rgba(193, 193, 193, 0.088);
+    margin: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+    border-bottom: 1px solid black;
+}
+
+.navbar a{
+    /* float: left; */
+    display: block;
+    
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-size: 20px;
+    letter-spacing: 5px;
+    text-shadow: 2px 1px black;
+    font-family: 'Courier New', Courier, monospace;
+    /* border-bottom: 1px dotted rgb(255, 255, 255); */
+}
+
+.navbar input[type="submit"] {
+    border: none;
+    border-bottom: none;
+    background-color: rgba(0, 0, 0, 0.101);
+    color: white; /* Set text color to ensure visibility */
+    cursor: pointer; /* Add pointer cursor to indicate clickable */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35px;
+    border-radius: 2px;
+    /* padding: 3px; */
+}
+
+
+.vertical { 
+    width: 0px; 
+    border-left: 1px solid #000; 
+    /* height: 100%;  */
+    float: left; 
+} 
+
+p {
+    margin: 18px;
+    display: flex;
+}
+
+.contain {
+    display: flex;
+}
+
+#chil {
+    margin: 20px;
+}
+
+.forms {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; 
+    align-items: flex-start;
+}
+
+.forms div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+

@@ -1,0 +1,41 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Sensitive configuration files
+config.php
+
+# Test files (should not be deployed)
+test_connection.php
+run_test.html
+
+# Documentation (not needed on server)
+*.md
+DATABASE_SETUP.md
+INFINITYFREE_SETUP.md
+UPLOAD_GUIDE.md
+TESTING_STEPS.md
+README.md
+
+
