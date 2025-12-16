@@ -90,29 +90,31 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
     $(document).ready(function() {
+        // Load heart status on page load
+        $(".heart-checkbox").each(function() {
+            var destinationId = $(this).attr("id").split("-")[2];
+            checkIfHearted(destinationId);
+        });
+
+        // Handle checkbox change
         $(".heart-checkbox").change(function() {
-            var destinationId = $(this).attr("id").split("-")[2]; // Extract destination ID from checkbox ID
-            $.post("api/add_hearted_destinations.php", { destination_id: destinationId }, function(data) {
-                alert(data); // Show response message
-            });
+            var destinationId = $(this).attr("id").split("-")[2];
+            
+            <?php if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true && isset($_SESSION['user_id'])): ?>
+                if ($(this).is(":checked")) {
+                    addHeartedDestination(destinationId);
+                }
+            <?php else: ?>
+                alert("Please log in to add favorites.");
+                $(this).prop('checked', false);
+            <?php endif; ?>
         });
     });
-    $(document).ready(function() {
-    $(".heart-checkbox").each(function() {
-        var destinationId = $(this).attr("id").split("-")[2];
-        isHearted(destinationId);
-    });
 
-    $(".heart-checkbox").change(function() {
-        var destinationId = $(this).attr("id").split("-")[2];
-        if ($(this).is(":checked")) {
-            addHeartedDestination(destinationId);
-        } 
-    });
-
-    function isHearted(destinationId) {
+    function checkIfHearted(destinationId) {
         $.post("api/check_hearted_destinations.php", { destination_id: destinationId }, function(data) {
             if (data === "true") {
+                $("#heart-checkbox-" + destinationId).prop("checked", true);
                 $("#heart-checkbox-" + destinationId).next(".heart-label").addClass("red-heart");
             }
         });
@@ -122,29 +124,11 @@
         $.post("api/add_hearted_destinations.php", { destination_id: destinationId }, function(data) {
             if (data === "success") {
                 $("#heart-checkbox-" + destinationId).next(".heart-label").addClass("red-heart");
+            } else {
+                alert(data);
             }
         });
     }
-
-    
-    
-});
-
-</script>
-<script>
-    $(document).ready(function() {
-        $(".heart-checkbox").change(function() {
-            var destinationId = $(this).attr("id").split("-")[2]; // Extract destination ID from checkbox ID
-            <?php if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true && isset($_SESSION['user_id'])): ?>
-                $.post("api/add_hearted_destinations.php", { destination_id: destinationId }, function(data) {
-                    alert(data); // Show response message
-                });
-            <?php else: ?>
-                alert("Please log in to add favorites.");
-                $(this).prop('checked', false); // Uncheck the checkbox since user is not logged in
-            <?php endif; ?>
-        });
-    });
 </script>
 
 </body>
