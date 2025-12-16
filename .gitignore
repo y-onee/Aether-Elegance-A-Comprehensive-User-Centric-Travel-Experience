@@ -31,7 +31,6 @@ test_connection.php
 run_test.html
 
 # Documentation (not needed on server)
-*.md
 DATABASE_SETUP.md
 INFINITYFREE_SETUP.md
 UPLOAD_GUIDE.md
