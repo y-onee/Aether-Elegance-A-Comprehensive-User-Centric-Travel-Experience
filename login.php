@@ -11,7 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
 
         if ($result->num_rows == 1) {
             $row = $result->fetch_assoc();
-            if ($pass == $row['pass']) {
+            if (password_verify($pass, $row['pass'])) {
                 session_start();
                 $_SESSION['loggedin'] = true;
                 $_SESSION['user_id'] = $row['user_id']; // Store user ID in session

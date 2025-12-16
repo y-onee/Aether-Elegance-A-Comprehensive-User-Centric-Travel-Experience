@@ -6,7 +6,7 @@ session_start();
         if(isset($_POST['email']) && isset($_POST['username']) && isset($_POST['pass'])) {
             $email = $_POST['email'];
             $username = $_POST['username'];
-            $pass = $_POST['pass'];
+            $pass = password_hash($_POST['pass'], PASSWORD_BCRYPT);
 
             $sql = "INSERT INTO users (username, email, pass) VALUES ('$username', '$email', '$pass')";
             
