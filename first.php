@@ -46,8 +46,8 @@
         </div>
         
         <img src="Media/SkyMountain.png" class="sky translate" data-speed=1>
-        <img src="Media/FrontMountain.png" class="mountain1 translate" data-speed=-0.003 srcset="">
-        <img src="Media/MidMountain.png" class="mountain2 translate" data-speed=0.5 srcset="">    
+        <img src="Media/FrontMountain.png" class="mountain1 translate" data-speed=-0.003>
+        <img src="Media/MidMountain.png" class="mountain2 translate" data-speed=0.5>    
         <div class="shadow"></div>
     </header>
 
